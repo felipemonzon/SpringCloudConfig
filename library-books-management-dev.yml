@@ -26,7 +26,7 @@ logging:
   file: '[%X{data}%thread] [%X{X-B3-TraceId:-}] - %5p'
   console: "%p, %d{'yyyy-MM-dd HH:mm:ss,SSS',America/Mexico_City}, %C{1}:%M:%L, %X{mdc.uuid}, %m%n%ex{3}"
  level:
-  mx.santander.logbook: DEBUG
+  com.moontech.library.books.management: DEBUG
   org:
    springframework.data: DEBUG
    hibernate:
@@ -38,7 +38,7 @@ logging:
 # SWAGGER PROPERTIES
 # ===================================================================
 swagger:
- basePackage: mx.santander.logbook.management
+ basePackage: com.moontech.library.books.management
  title: SERV-library-booksManagement
  descriptionApi: Gesti\u00F3n y administraci\u00F3n de los libros.
  version: 1.0.0
