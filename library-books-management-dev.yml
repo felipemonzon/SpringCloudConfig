@@ -15,7 +15,7 @@ spring:
   password:
  jpa:
   naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-  hibernate.ddl-auto: auto
+  hibernate.ddl-auto: update
 
 # ===================================================================
 # LOG PROPERTIES
