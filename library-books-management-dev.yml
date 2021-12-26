@@ -15,7 +15,7 @@ spring:
   password:
  jpa:
   naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-  hibernate.ddl-auto: none
+  hibernate.ddl-auto: auto
 
 # ===================================================================
 # LOG PROPERTIES
@@ -37,8 +37,23 @@ logging:
 # URL ENDPOINTS
 # ===================================================================
 api:
- uri.basePath: "/api"
- interceptorPath: "/**"
+  uri:
+    basePath: "/api"
+    domain:
+      authors: "/authors"
+      categories: /categories
+      publishers: /publishers
+      books: /books
+    data:
+      retrieve: /retrieve
+      create: /
+      modified: /{id}
+      search: /{search}
+  interceptorPath: "/**"
+
+ books:
+   data: ${api.uri.domain.books}/
+   search: ${api.uri.domain.books}/{search}
 
 # ===================================================================
 # SWAGGER PROPERTIES
