@@ -38,22 +38,18 @@ logging:
 # ===================================================================
 api:
   uri:
-    basePath: "/api"
+    basePath: /api
     domain:
-      authors: "/authors"
+      authors: /authors
       categories: /categories
       publishers: /publishers
       books: /books
     data:
       retrieve: /retrieve
-      create: /
+      create: /create
       modified: /{id}
       search: /{search}
   interceptorPath: "/**"
-
- books:
-   data: ${api.uri.domain.books}/
-   search: ${api.uri.domain.books}/{search}
 
 # ===================================================================
 # SWAGGER PROPERTIES
