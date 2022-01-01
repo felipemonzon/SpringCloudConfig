@@ -7,7 +7,7 @@ spring:
  application:
   name: library-books-management
  server:
-  port: 8080
+  port: 8084
  datasource:
   driverClassName: com.mysql.cj.jdbc.Driver
   url: jdbc:mysql://localhost:3306/library
