@@ -1,13 +1,11 @@
 # ===================================================================
 # GENERAL PROPERTIES
 # ===================================================================
+server:
+  port: 8080
 spring:
- main:
-  banner-mode: off
  application:
   name: library-users
- server:
-  port: 8080
  datasource:
   driverClassName: com.mysql.cj.jdbc.Driver
   url: jdbc:mysql://localhost:3306/library
@@ -52,7 +50,7 @@ api:
 # SWAGGER PROPERTIES
 # ===================================================================
 swagger:
- basePackage: com.moontech.library.books
+ basePackage: com.moontech.library.users
  title: SERV-library-userDomain
  descriptionApi: Gesti\u00F3n y administraci\u00F3n de los usuarios.
  version: 1.0.0
