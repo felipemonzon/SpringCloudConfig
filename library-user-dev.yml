@@ -16,6 +16,14 @@ spring:
   hibernate.ddl-auto: update
 
 # ===================================================================
+# SECURITY PROPERTIES
+# ===================================================================
+security:
+  jwt:
+    Key: llaveperrona
+    lifeTime: 100
+
+# ===================================================================
 # LOG PROPERTIES
 # ===================================================================
 logging:
@@ -44,6 +52,7 @@ api:
       create: /create
       modified: /{id}
       search: /{search}
+      authentication: ${api.uri.domain.users}/authentication
   interceptorPath: "/**"
 
 # ===================================================================
